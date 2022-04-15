@@ -6,17 +6,12 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Crypt;
 use App\Models\User;
 use URL;
 use App\Helpers\Helper;
 use App\Models\Role;
-use App\Models\Department;
-use Yajra\DataTables\DataTables;
-use App\Models\Menu;
 use App\Http\Controllers\admin\BaseController;
 use Illuminate\Support\Facades\Response;
-use App\Models\MenuPermission;
 use Illuminate\Support\Facades\DB;
 
 

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\admin\HomeController;
 use App\Http\Controllers\admin\UserController;
+use App\Http\Controllers\admin\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,6 +82,9 @@ Route::middleware(['auth'])->group(function (){
             Route::post('getusers', [UserController::class, 'postUsersList'])->name('getusers');
             Route::post('userresetpassword', [UserController::class, 'postResetUserPassword'])->name('userresetpassword');
 
+
+            /* Book Section */
+            Route::get('book/index', [BookController::class, 'index'])->name('book.index');
         });
 
 });
