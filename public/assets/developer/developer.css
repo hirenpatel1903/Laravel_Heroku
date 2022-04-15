@@ -1,0 +1,59 @@
+.profile-img{
+    width: 120px;height: 120px;
+}
+.custom_permission_checkbox{
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    zoom: 1.5;
+    cursor: pointer;
+}
+.adrightbtn{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.actioninvtee{
+    padding-top: 5.5px !important;
+}
+
+.hide_section {
+    display:none;
+}
+
+.searchbarfilter{
+    margin-top: 3px !important;
+}
+.yellow-status{
+    color: #ffffff;
+    background: #ffb822 !important;
+}
+
+#invited_user_permission{
+    zoom: 1.1;
+}
+
+.btnrightquestion{
+    position: absolute;
+    right: 37px;
+    top: 5px;
+    padding-top: 4px;
+}
+
+/* Text in Add Date Icon Start */
+.InputwithIcon input[type=text]{
+    padding-right: 40px;
+}
+
+.InputwithIcon{
+    position: relative;
+}
+
+.InputwithIcon i{
+    position: absolute;
+    right: 0;
+    top: 9px;
+    padding-right: 9px;
+}
+
+/* Text in Add Date Icon End */

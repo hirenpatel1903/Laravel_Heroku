@@ -25,7 +25,7 @@ class UserDetailsSeeder extends Seeder
                 'email_verified_at' => now(),
                 'password' => bcrypt('admin@123'), // admin@123
                 'remember_token' => Str::random(10),
-                'status' => 1,
+                'status' => 'active',
             ]);
         }else{
             User::where('email', 'admin@appringer.com')->update([
@@ -35,7 +35,7 @@ class UserDetailsSeeder extends Seeder
                 'email_verified_at' => now(),
                 'password' => bcrypt('admin@123'), // admin@123
                 'remember_token' => Str::random(10),
-                'status' => 1,
+                'status' => 'active',
             ]);
         }
     }
