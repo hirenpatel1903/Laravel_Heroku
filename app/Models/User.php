@@ -112,9 +112,9 @@ class User extends Authenticatable
     	parse_str($request->fromValues,$searcharray);
 
         if(isset($searcharray) && !empty($searcharray)){
-            // if($searcharray['status'] !=''){
-            //         $query->where("users.status",'=',$searcharray['status']);
-            // }
+            if($searcharray['status'] !=''){
+                    $query->where("users.status",'=',$searcharray['status']);
+            }
             if($searcharray['role_id'] !=''){
                     $query->where("users.role_id",'=',$searcharray['role_id']);
             }

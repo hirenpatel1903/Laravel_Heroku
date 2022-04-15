@@ -121,11 +121,11 @@ class Helper {
     }
 
     public static function getStatusArray(){
-     return   array(
-                'active'=>"Active",
-                'inactive'=>"InActive",
-                'locked'=>"locked",
-            );
+        return array(
+            'active'=>"Active",
+            'inactive'=>"InActive",
+            'locked'=>"locked",
+        );
     }
 
     public  static function generateRandomString($length =20) {

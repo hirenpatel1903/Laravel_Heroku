@@ -37,6 +37,49 @@ use App\Helpers\Helper;
         @include('errormessage')
         <div class="kt-portlet kt-portlet--mobile">
             <div class="kt-portlet__body">
+                <!-- Search Filter Start -->
+                <div class="kt-form kt-form--label-right kt-margin-t-20 kt-margin-b-10 searchbarfilter">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 order-2 order-xl-1">
+                            <form method="POST" action="" accept-charset="UTF-8" class="form-horizontal" id="filterData" name="filterData" novalidate="novalidate">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
+                                        <div class="kt-form__group kt-form__group--inline">
+                                            <div class="kt-form__label">
+                                                <label>Status:</label>
+                                            </div>
+                                            <div class="kt-form__control">
+                                                <select class="form-control" id="status" name="status">
+                                                    <option value="" selected>Select Status</option>
+                                                    @foreach($status as $key=>$status)
+                                                        <option value="{{$key}}">{{$status}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 kt-margin-b-20-tablet-and-mobile">
+                                        <div class="kt-form__group kt-form__group--inline">
+                                            <div class="kt-form__label">
+                                                <label>Role:</label>
+                                            </div>
+                                            <div class="kt-form__control">
+                                                <select class="form-control" id="role_id" name="role_id">
+                                                    <option value="" selected>Select Role</option>
+                                                    @foreach($roles as $key=>$roles)
+                                                        <option value="{{$roles->id}}">{{$roles->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Search Filter End-->
                 <br>
                 <!--begin: Datatable -->
                 <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
