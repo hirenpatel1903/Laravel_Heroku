@@ -47,3 +47,17 @@ In Laravel Setup Heroku
 Heroku Migration:
 - heroku run php artisan migrate
 
+
+
+
+---- Login Details ----
+
+Website link : http://appringer1.einzigartige.in/
+
+Admin Details : 
+email = admin@appringer.com
+pass  = Admin@123
+
+User Details : 
+email = patelhiren.hp19@gmail.com
+pass  = User@123
