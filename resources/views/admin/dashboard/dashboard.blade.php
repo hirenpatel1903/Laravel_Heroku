@@ -100,10 +100,10 @@
                                             </g>
                                             </svg> </span>
                                         <span class="kt-widget17__subtitle">
-                                            Delivered
+                                            Total Users
                                         </span>
                                         <span class="kt-widget17__desc">
-                                            15 New Paskages
+                                            {{$data_total->data_total_UserAccount}} New Users
                                         </span>
                                     </div>
                                     <div class="kt-widget17__item">
@@ -116,14 +116,14 @@
                                             </g>
                                             </svg> </span>
                                         <span class="kt-widget17__subtitle">
-                                            Ordered
+                                            Total Books
                                         </span>
                                         <span class="kt-widget17__desc">
-                                            72 New Items
+                                            {{$data_total->data_total_Books}} New Books
                                         </span>
                                     </div>
                                 </div>
-                                <div class="kt-widget17__items">
+                                {{-- <div class="kt-widget17__items">
                                     <div class="kt-widget17__item">
                                         <span class="kt-widget17__icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--warning">
@@ -156,14 +156,14 @@
                                             34 Upgraded Boxes
                                         </span>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--end:: Widgets/Trends-->
             </div>
-            <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
+            {{-- <div class="col-lg-6 col-xl-4 order-lg-1 order-xl-1">
 
                 <!--begin:: Widgets/Sales Stats-->
                 <div class="kt-portlet kt-portlet--head--noborder kt-portlet--height-fluid">
@@ -304,11 +304,11 @@
                 </div>
 
                 <!--end:: Widgets/Sales Stats-->
-            </div>
+            </div> --}}
         </div>
 
         <!--End::Row-->
-        <div class="col-xl-8 col-lg-12 order-lg-3 order-xl-1">
+        {{-- <div class="col-xl-8 col-lg-12 order-lg-3 order-xl-1">
 
             <!--begin:: Widgets/User Progress -->
             <div class="kt-portlet kt-portlet--height-fluid">
@@ -480,7 +480,7 @@
             </div>
 
             <!--end:: Widgets/User Progress -->
-        </div>
+        </div> --}}
         <!--End::Dashboard 3-->
     </div>
 

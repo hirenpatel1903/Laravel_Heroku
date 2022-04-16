@@ -81,6 +81,10 @@ Route::middleware(['auth'])->group(function (){
 
             /* Book Section */
             Route::get('book/index', [BookController::class, 'index'])->name('book.index');
+            Route::get('book/store', [BookController::class, 'store'])->name('book.store');
+            Route::get('book/{id}', [BookController::class, 'show'])->name('book.show');
+
+            Route::post('getbooks', [BookController::class, 'postBooksList'])->name('getbooks');
         });
 
 });

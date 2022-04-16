@@ -47,7 +47,9 @@ return [
         "cannotchangemastertoinvite"=>"You can not change main master user to invited user",
         "clearDatadecease"=>"Data cleared successfully",
 
+        /*  User Module */
+        "clearBookDatadecease"=>"No data available in table",
+        "bookUpdate"=>"Book updated successfully",
+        "noThumbnailDeatils"=>"Thumbnail No data available",
 
-    /* API Start */
-    /* API End */
 ];

@@ -164,7 +164,7 @@ class UserController extends BaseController
             $data = User::addUser($request);
             session()->flash('success', trans('messages.userCreations'));
             return redirect()->route('user.index');
-    }catch(\Exception $e){
+        }catch(\Exception $e){
             session()->flash('error',$e->getMessage());
             return redirect()->route('user.create');
         }

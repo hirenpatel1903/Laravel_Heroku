@@ -83,7 +83,7 @@ use App\Helpers\Helper;
                                 @if(Auth::user()->role_id==config('const.roleAdmin'))
                                 <li class="kt-menu__item  {{ Route::is('user.show') || Route::is('user.index') || Route::is('user.create')  || Route::is('user.edit')  ? 'kt-menu__item--active' : '' }}" aria-haspopup="true"><a href="{{route('user.index')}}" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-user"></i><span class="kt-menu__link-text">User</span></a></li>
 
-                                <li class="kt-menu__item  {{ Route::is('book.index')  ? 'kt-menu__item--active' : '' }}" aria-haspopup="true"><a href="{{route('book.index')}}" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-open-text-book"></i><span class="kt-menu__link-text">Book</span></a></li>
+                                <li class="kt-menu__item  {{ Route::is('book.show') || Route::is('book.index')  ? 'kt-menu__item--active' : '' }}" aria-haspopup="true"><a href="{{route('book.index')}}" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-open-text-book"></i><span class="kt-menu__link-text">Book</span></a></li>
                                 @endif
 
                             </ul>

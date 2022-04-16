@@ -6,6 +6,7 @@ use App\Http\Controllers\admin\BaseController;
 use PDF;
 use Auth;
 use App\Models\User;
+use App\Models\Book;
 
 class HomeController extends BaseController
 {
@@ -41,7 +42,8 @@ class HomeController extends BaseController
     public function index(){
         if(Auth::user()->role_id==config('const.roleAdmin')){
             $data_total = new \stdClass();
-            $data_total->data_total_Account = User::activeDepartmentAccountCount();
+            $data_total->data_total_UserAccount = User::activeDepartmentAccountCount();
+            $data_total->data_total_Books = Book::activeDepartmentAccountCount();
 
             return view('admin.dashboard.dashboard',compact('data_total'));
         }
