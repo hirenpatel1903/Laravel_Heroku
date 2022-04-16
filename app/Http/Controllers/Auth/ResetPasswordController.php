@@ -47,7 +47,7 @@ class ResetPasswordController extends Controller
             return back()->withInput()->withErrors($validator->errors());
         }
 
-        $user = User::where('email',$request->email)->whereIn('role_id',[1,2,3])->first();
+        $user = User::where('email',$request->email)->whereIn('role_id',[1,2])->first();
         if(!$user){
             session()->flash('error', trans('messages.notfoundEmail'));
             return redirect('login');
@@ -72,7 +72,7 @@ class ResetPasswordController extends Controller
             'email' => $request->email,
             'token' => $token,
             'created_at' => Carbon::now()
-            ])->forgotLink($token, $request->email,'',$user->fullName);
+            ])->forgotLink($token, $request->email,$user->fullName);
 
             session()->flash('success', trans('messages.forgotPassword'));
             return redirect('login');
@@ -87,15 +87,10 @@ class ResetPasswordController extends Controller
         try{
             $tokenData = DB::table('password_resets')->where('token', $token)->first();
             if ( !$tokenData ){
-                if(isset($isMobile) && $isMobile==1){
-                    session()->flash('error', trans('messages.InvalidResetPassword'));
-                     return redirect()->route('verification');
-                }else{
-                    session()->flash('error', trans('messages.InvalidResetPassword'));
-                    return redirect()->to('/login');
-                }
+                session()->flash('error', trans('messages.InvalidResetPassword'));
+                return redirect()->to('/login');
             }
-            return view('auth.passwords.reset',array('token'=>$token,'isMobile'=>$isMobile));
+            return view('auth.passwords.reset',array('token'=>$token));
         }catch(\Exception $e){
             session()->flash('error',$e->getMessage());
             return redirect()->route('resetpasswordform');

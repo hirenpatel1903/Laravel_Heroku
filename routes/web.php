@@ -39,7 +39,7 @@ Route::get('/admin/login', [App\Http\Controllers\Auth\LoginController::class, 'i
 Route::get('home', [App\Http\Controllers\Auth\LoginController::class, 'index']);
 
 
-Route::get('forgot-password/{token}/{ismobile?}', [App\Http\Controllers\Auth\ResetPasswordController::class, 'showPasswordResetForm'])->name('resetpasswordform');
+Route::get('forgot-password/{token}', [App\Http\Controllers\Auth\ResetPasswordController::class, 'showPasswordResetForm'])->name('resetpasswordform');
 Route::post('resetpasswordemail', [App\Http\Controllers\Auth\ResetPasswordController::class, 'resetPasswordSendEmail'])->name('resetpasswordemail');
 Route::post('reset-password/{token}', [App\Http\Controllers\Auth\ResetPasswordController::class, 'resetPassword'])->name('passwordreset');
 
