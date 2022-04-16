@@ -43,10 +43,6 @@ Route::get('forgot-password/{token}', [App\Http\Controllers\Auth\ResetPasswordCo
 Route::post('resetpasswordemail', [App\Http\Controllers\Auth\ResetPasswordController::class, 'resetPasswordSendEmail'])->name('resetpasswordemail');
 Route::post('reset-password/{token}', [App\Http\Controllers\Auth\ResetPasswordController::class, 'resetPassword'])->name('passwordreset');
 
-
-Route::get('registration-confirmation/{token}', [App\Http\Controllers\Auth\LoginController::class, 'confirmation']);
-Route::get('verification', [App\Http\Controllers\Auth\LoginController::class, 'verification'])->name('verification');
-
 Route::get('404notfound', [App\Http\Controllers\admin\HomeController::class, 'notFound'])->name('404notfound');
 Route::get('500error', [App\Http\Controllers\admin\HomeController::class, 'exceptions'])->name('500error');
 Route::get('401unauthorized', [App\Http\Controllers\admin\HomeController::class, 'unauthorized'])->name('401unauthorized');
