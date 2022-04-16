@@ -49,8 +49,8 @@ class HomeController extends BaseController
         }
         if(Auth::user()->role_id==config('const.roleUser')){
             $data_total = new \stdClass();
-            $user_data_deptName = User::where('id',Auth::user()->id)->first();
-            return view('employee.dashboard.dashboard',compact('dept_name_data','data_total'));
+            $data_total->data_total_Books = Book::activeDepartmentAccountCount();
+            return view('admin.dashboard.dashboard',compact('data_total'));
         }
     }
 }

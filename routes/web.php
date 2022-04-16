@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\admin\HomeController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\admin\BookController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
